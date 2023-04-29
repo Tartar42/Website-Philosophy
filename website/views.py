@@ -5,8 +5,12 @@ views = Blueprint(__name__, "views")
 
 
 
+from flask import Blueprint
+
+views = Blueprint(__name__ ,'views')
+
 @views.route("/")
-#this function will run, whenever we go to the /-route: "http://127.0.0.1:5000/"
+#this function will run, whenever we go to the /-route: ""
 def home():
     return '<h1>Test</h1>'
 
