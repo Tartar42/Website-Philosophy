@@ -1,3 +1,6 @@
+#
+#"__" = makes website folder a python package
+
 from flask import Flask
 
 def create_app(): 

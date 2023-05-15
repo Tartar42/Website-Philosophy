@@ -15,6 +15,3 @@ if __name__ == '__main__':
 #to use of python
 
 #sources:
-  #For creating website: https://www.youtube.com/watch?v=dam0GPOAvVI&list=PLsCTnBEpCwH-MZja6wejVZ6sdMbghuGYd&index=32&t=53s
-  #For creating database: 
-  #For fixing problems:
