@@ -23,19 +23,24 @@
 </head>
 <body>
   <nav class ="navbar-expand-lg navbar-dark bg-dark">
-    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
 <!-- here could be a problem eventually (33:31) -->
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navber-collapse" id="navbar">
-      <div class="navabr-nav">
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="navbar-nav">
         <a class="nav-item nav-link" id="login" href="/login">Login</a>
         <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
         <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-        <a class="nav-item nav-link" id="home" href="/">Homen</a>
+        <a class="nav-item nav-link" id="home" href="/">Home</a>
       </div>
     </div>
   </nav>
+  <div class="container">
+    {% block content %}
+    <!-- anything that is put inside here, will show up on the sreen if we rendered based on HTML. Allows to override anything in here -->
+    {% endblock %}
+  </div>
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
