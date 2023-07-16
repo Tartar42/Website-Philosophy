@@ -36,6 +36,20 @@
       </div>
     </div>
   </nav>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages  %}
+    {% for message in messages %}
+      <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismissi="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+    {% endfor %}
+  {% endif %}
+  {% endwith %}
+
   <div class="container">
     {% block content %}
     <!-- anything that is put inside here, will show up on the sreen if we rendered based on HTML. Allows to override anything in here -->
