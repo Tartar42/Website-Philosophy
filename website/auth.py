@@ -32,7 +32,7 @@ def sign_up():
         if len(email) < 4: 
             flash('Hey! HEYYY! your email is too short.', category='error')
         elif len(firstName) < 2:
-            flash('Hey! HEYYY! At least two letters bro', category='error')
+            flash('Hey! HEYYY! At least two letters for your name bro', category='error')
         elif len(password1) < 6:
             flash('Hey! HEYYY! Your password is wayy to short buddy', category='error')
         elif password1 != password2:
