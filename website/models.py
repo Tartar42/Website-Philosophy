@@ -7,7 +7,7 @@ from sqlalchemy.sql import func
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.String(10000))
-    date = db.Column(db.DateTime(timezone=True, default=func.now ))
+    date = db.Column(db.DateTime(timezone=True), default=func.now())
     # Timezone info is also going to be stored. func.now -> gets the current date and time 
     # when we create a new note object, it will call func, it will get the time it is and it will use that to store
     # in the db.DateTime-Field + it will store the timezone info of this daytime object
@@ -36,6 +36,7 @@ class User(db.Model, UserMixin):
     notes = db.relationship('Note')
     # tell flask: everytime we create a note add into this users note relationship that note-id
     # lowercase 'n' (for note) because in sql foreignkey has lowercase, and Class ist capital
+
 # we will store all of our users like this
 
 
