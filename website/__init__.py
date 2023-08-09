@@ -37,10 +37,20 @@ def create_app():
 
   # (we can't start a variable with ".")
 
-  with app.app_context():
-    db.create_all()
+  create_database(app)
+
+
+
+  def create_database(app):
+    if not path('website/' + DB_NAME):
+      db.create_all(app=app)
+      print('created Database!')
+
+  #with app.app_context():
+   # db.create_all()
 
   return app
+
 
 
 
